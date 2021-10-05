@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+.center {
+  margin: auto;
+  width: 700px;
+  padding: 10px;
+}
+
+#searchBar {
+  width: 99%;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+embed {
+  padding: 0;
+  height: 850px;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  background: #f2f2f2;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+.macro {
+  position: relative;
+  left: 15px;
+  border-radius: 10px;
+  background: lightgray;
+  width: 600px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.macro a {
+  font-size: 60%;
+}
+
+.h2 {
+  display: block;
+}
+
+#b {
+  display: block;
+  margin: 10px 0px 5px 0px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 5%;
+  background: #8a8a8a;
+}
+
+header li, header a {
+  font: bold;
+  font-size: 16px;
+  color: #1a5096;
+  text-decoration: none;
+}
+
+header .nav_links {
+  list-style: none;
+}
+
+header .nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+header .nav_links li a {
+  -webkit-transition: all 0.3s ease 0;
+  transition: all 0.3s ease 0;
+}
+
+header .nav_links li a:hover {
+  color: darkgray;
+}
+
+.upload {
+  padding: 10px 5%;
+}
+/*# sourceMappingURL=main.css.map */

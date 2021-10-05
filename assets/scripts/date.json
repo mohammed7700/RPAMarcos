@@ -1,0 +1,40 @@
+{
+    "Name": "datetime",
+    "CreationDate": "2021-9-15",
+    "Commands": [
+      {
+        "Command": "executeScript",
+        "Target": "var now = new Date();\nreturn now.getDate()+'.'+( ((now.getMonth()+1) < 10)? '0'+(now.getMonth()+1):(now.getMonth()+1) )+'.'+now.getFullYear();",
+        "Value": "now",
+        "Description": ""
+      },
+      {
+        "Command": "executeScript",
+        "Target": "var now = new Date();\nnow.setDate(now.getDate()+14);\nreturn now.getDate()+'.'+( ((now.getMonth()+1) < 10)? '0'+(now.getMonth()+1):(now.getMonth()+1) )+'.'+now.getFullYear();",
+        "Value": "twoWeeks",
+        "Description": ""
+      },
+      {
+        "Command": "type",
+        "Target": "xpath=//input[2]",
+        "Value": "${now}",
+        "Targets": [
+          "xpath=//*[@id=\"egxtarf\"]/div/div/input[2]",
+          "xpath=//input[2]",
+          "css=#egxtarf > div:nth-child(1) > div > input.form-control.input.active"
+        ],
+        "Description": ""
+      },
+      {
+        "Command": "type",
+        "Target": "xpath=//div[4]/div/div/div/input[2]",
+        "Value": "${twoWeeks}",
+        "Targets": [
+          "xpath=//*[@id=\"ejqgkh\"]/div/div/input[2]",
+          "xpath=//div[4]/div/div/div/input[2]",
+          "css=#ejqgkh > div:nth-child(1) > div > input.form-control.input.active"
+        ],
+        "Description": ""
+      }
+    ]
+}
