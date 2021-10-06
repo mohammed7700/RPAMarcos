@@ -1,7 +1,33 @@
+
 var json34c;
 
 const searchBar = document.getElementById('searchBar');
+const macros = document.getElementsByClassName('macro');
 console.log(document.getElementById('searchBar'));
+console.log(document.getElementsByClassName('macro'));
+
+searchBar.addEventListener('keyup', (e) => {
+
+    var searchStr = e.target.value.toLowerCase();
+
+    console.log("Die Suche: "+searchStr);
+
+    for (let i = 0; i < macros.length; i++) {
+
+        macros[i].style.display = "block";
+    }
+
+    if(searchStr != ""){
+
+        for (let i = 0; i < macros.length; i++) {
+
+            if(!macros[i].firstElementChild.innerHTML.toLowerCase().includes(searchStr)) {
+
+                macros[i].style.display = "none";
+            }
+        }
+    }
+});
 
 const loadEntries = (data) => {
 
@@ -18,6 +44,7 @@ function loadScript(script) {
 
     document.getElementById(script['Name'].replace(/\s/g, '')).addEventListener('click', () => {
 
+        //RPA script for embedding Macros
         (function (detail) {
             var isExtensionLoaded = function () {
                 var $root = document.documentElement
@@ -73,7 +100,7 @@ function createHtmlElements (json) {
 
     if(exURL != ''){
         linkTag = `
-            <a href="${exURL}">link zum Formular</a>
+            <a href="${exURL}" target="_blank">link zum Formular</a>
             `
     }
 
@@ -121,21 +148,8 @@ window.onload = function () {
 
         loadEntries(data);
 
-        searchBar.addEventListener('keyup', (e) => {
 
-            var searchStr = e.target.value.toLowerCase();
-        
-            console.log(searchStr);
-        
-            const filteredDataset = dataset.filter( macro => {
-                
-                return macro.Name.toLowerCase().includes(searchStr);
-            });
-        
-            loadEntries(filteredDataset);
-        });
     }); 
-
 }
 
 function Test() {
@@ -235,4 +249,19 @@ function formular34c() {
         })
 }
 
-/*var phpJson = <?php echo $JsonData ?>;*/
+    /*var phpJson = <?php echo $JsonData ?>;*/
+
+
+    /*searchBar.addEventListener('keyup', (e) => {
+
+    var searchStr = e.target.value.toLowerCase();
+
+    console.log(searchStr);
+
+    const filteredDataset = dataset.filter( macro => {
+        
+        return macro.Name.toLowerCase().includes(searchStr);
+    });
+
+        loadEntries(filteredDataset);
+    });*/

@@ -33,6 +33,21 @@ body {
     font-weight: 500;
 }
 
+.notMacroElements {
+
+    position: relative;
+    left: 15px;
+    border-radius: 10px;
+    background: lightgray;
+    width: 600px;
+    margin-top: 20px;
+    padding: 20px;
+
+    a {
+        font-size: 60%;
+    }
+}
+
 .macro {
 
     position: relative;
