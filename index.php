@@ -31,12 +31,6 @@
                 <button type="submit" name="submit">Upload</button>
             </form> 
         </div>
-        <div class="notMacroElements">
-            <form action="deletefile.php" method="POST">
-                <input style="display: none" type="text" name="filename" value="test">
-                <button type="submit" name="submit">Upload</button>
-            </form> 
-        </div>
     </div>
 
     <div class="center">
