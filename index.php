@@ -16,7 +16,7 @@
 
         <nav>
             <ul class="nav_links">
-                <li><a href="index.html">Scripts</a></li>
+                <li><a href="index.php">Scripts</a></li>
                 <li><a href="doku.html">Doku</a></li>
             </ul>
         </nav>
@@ -24,11 +24,16 @@
     </header>
 
     <div class="center upload">
-
         <h2 for="">Upload Scripts</h2>
         <div class="notMacroElements">
             <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <input type="file" name="file">
+                <button type="submit" name="submit">Upload</button>
+            </form> 
+        </div>
+        <div class="notMacroElements">
+            <form action="deletefile.php" method="POST">
+                <input style="display: none" type="text" name="filename" value="test">
                 <button type="submit" name="submit">Upload</button>
             </form> 
         </div>

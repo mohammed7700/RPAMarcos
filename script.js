@@ -6,6 +6,8 @@ const macros = document.getElementsByClassName('macro');
 console.log(document.getElementById('searchBar'));
 console.log(document.getElementsByClassName('macro'));
 
+
+//display none jedes Macro div welches substring, aus searchBar nicht enthält
 searchBar.addEventListener('keyup', (e) => {
 
     var searchStr = e.target.value.toLowerCase();
@@ -35,8 +37,11 @@ const loadEntries = (data) => {
 
     for(var i = 0; i < data.length; i++){
 
-        intoDOOM(data[i]);
-        loadScript(data[i]);
+        if(!!data[i]) {
+
+            intoHTMLDOM(data[i]);
+            loadScript(data[i]);
+        }
     }
 }
 
@@ -82,12 +87,9 @@ function loadScript(script) {
 }
 
 
-function intoDOOM(json) {
-
-    console.log("war hier in INTODOOM");
+function intoHTMLDOM(json) {
 
     var container = document.getElementById("mainContainer");
-
     container.innerHTML += createHtmlElements(json);
 }
 
@@ -109,6 +111,10 @@ function createHtmlElements (json) {
         <label class="h2">${json['Name']}</label>
         <input id="b" class="script" type="button" value="Run Macro">
         ${linkTag}
+        <form action="deletefile.php" method="POST">
+            <input style="display: none" type="text" name="filename" value="${json['Name']}">
+            <button type="submit" name="submit">Löschen</button>
+        </form> 
     </div>`;
 
     return tmpHTML;
@@ -142,13 +148,9 @@ window.onload = function () {
         return response.json();
     }).then(data => {
 
-        dataset = data;
-
-        console.log(dataset);
+        console.log(data);
 
         loadEntries(data);
-
-
     }); 
 }
 
