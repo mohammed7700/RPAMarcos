@@ -49,8 +49,15 @@
         </div>
         
         <div class="macro" id="ScriptfürFormular34c">
+            <form action="deletefile.php" method="POST">
+                <input style="display: none" type="text" name="filename" value="${json['Name']}">
+                <button type="submit" class="delete" name="submit">X</button>
+            </form> 
+
             <label class="h2">Script für Formular 34c</label>
             <input id="b" type="button" class="script" value="Run Macro" onclick="formular34c();">
+
+            
 
             <!-- <a href="https://www.develop-sr3snxi-ljhiuew5uktdu.eu-4.platformsh.site/antrag/34c">link zum Formular</a> -->
         </div>
@@ -171,13 +178,14 @@
 
             tmpHTML += `
             <div class="macro" id="${json['Name'].replace(/\s/g, '')}">
+                <form action="deletefile.php" method="POST">
+                    <input style="display: none" type="text" name="filename" value="${json['Name']}">
+                    <button type="submit" class="delete" name="submit">X</button>
+                </form> 
+
                 <label class="h2">${json['Name']}</label>
                 <input id="b" class="script" type="button" value="Run Macro">
                 ${linkTag}
-                <form action="deletefile.php" method="POST">
-                    <input style="display: none" type="text" name="filename" value="${json['Name']}">
-                    <button type="submit" name="submit">Löschen</button>
-                </form> 
             </div>`;
 
             return tmpHTML;

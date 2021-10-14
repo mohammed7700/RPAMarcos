@@ -103,7 +103,20 @@ header .nav_links li a:hover {
   color: darkgray;
 }
 
+.delete {
+  display: block;
+  float: right;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+  border: 1px 1px;
+}
+
 .upload {
   padding: 10px 5%;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */
