@@ -61,6 +61,12 @@ body {
     a {
         font-size: 60%;
     }
+
+    button, input {
+
+        cursor: pointer;
+        
+    } 
 }
 
 
@@ -115,13 +121,17 @@ header {
 
     display: block;
     float: right;
+
     background-color: red;
     color: white;
     font-weight: bold;
+
     border-radius: 5px;
     border-style: solid;
     border-color: white;
     border: 1px 1px;
+
+    cursor: pointer;
 }
 
 
@@ -129,5 +139,10 @@ header {
 
     padding: 10px 5%;
     border-radius: 5px;
+
+    button, input {
+
+        cursor: pointer;
+    }
 }
 

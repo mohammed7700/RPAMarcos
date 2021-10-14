@@ -57,8 +57,6 @@
             <label class="h2">Script für Formular 34c</label>
             <input id="b" type="button" class="script" value="Run Macro" onclick="formular34c();">
 
-            
-
             <!-- <a href="https://www.develop-sr3snxi-ljhiuew5uktdu.eu-4.platformsh.site/antrag/34c">link zum Formular</a> -->
         </div>
     </div>
