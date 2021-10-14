@@ -114,7 +114,7 @@ header .nav_links li a:hover {
 .delete {
   display: block;
   float: right;
-  background-color: red;
+  background-color: #d11a2a;
   color: white;
   font-weight: bold;
   border-radius: 5px;

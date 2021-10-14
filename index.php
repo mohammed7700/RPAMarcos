@@ -178,7 +178,7 @@
             <div class="macro" id="${json['Name'].replace(/\s/g, '')}">
                 <form action="deletefile.php" method="POST">
                     <input style="display: none" type="text" name="filename" value="${json['Name']}">
-                    <button type="submit" class="delete" name="submit">X</button>
+                    <button type="submit" class="delete" name="submit">Löschen</button>
                 </form> 
 
                 <label class="h2">${json['Name']}</label>
