@@ -12,7 +12,7 @@
 
     <header>
 
-        <p class="logo">Formular <span>Macros</span></p>
+        <img src="./assets/images/publicplan_logo_ohne-claim_320x56.png" alt="">
 
         <nav>
             <ul class="nav_links">

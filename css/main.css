@@ -9,7 +9,7 @@
   width: 99%;
   height: 32px;
   border-radius: 3px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #e4e4e4;
   font-family: "Poppins";
   font-weight: 500;
 }
@@ -31,7 +31,7 @@ body {
   position: relative;
   left: 15px;
   border-radius: 10px;
-  background: lightgray;
+  background: #e4e4e4;
   width: 600px;
   margin-top: 20px;
   padding: 20px;
@@ -45,7 +45,7 @@ body {
   position: relative;
   left: 15px;
   border-radius: 10px;
-  background: lightgray;
+  background: #e4e4e4;
   width: 600px;
   margin-top: 20px;
   padding: 20px;
@@ -79,7 +79,11 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 5%;
-  background: #8a8a8a;
+  background: #e4e4e4;
+}
+
+header img {
+  width: 200px;
 }
 
 header li, header a {
