@@ -8,4 +8,4 @@ foreach (new DirectoryIterator('./assets/scripts') as $file) {
 
 $result = json_encode($array, JSON_PRETTY_PRINT);
 
-echo $result;
+echo $result; ?>

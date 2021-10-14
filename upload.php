@@ -25,7 +25,7 @@ if( isset( $_POST ) ) {
 
                 move_uploaded_file($fileTmpName, $fileDestination);
 
-                header("Location: index.html?uploadsuccess");
+                header("Location: index.php?uploadsuccess");
             } else {
 
                 echo "Error! Datei zu groß!";
