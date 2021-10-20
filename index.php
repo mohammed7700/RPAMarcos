@@ -24,7 +24,7 @@
     </header>
 
     <div class="center upload">
-        <h2 for="">Upload Scripts</h2>
+        <h2 for="">Upload automatisierter Test Skripts</h2>
         <div class="notMacroElements">
             <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <input type="file" name="file">
@@ -34,7 +34,7 @@
     </div>
 
     <div class="center">
-        <h2>Macros</h2>
+        <h2>Test Skripts</h2>
         <div class="notMacroElements" id="searchWrapper" name="">
             <input type="text" id="searchBar" placeholder=" Suche nach Script">
         </div>
@@ -189,7 +189,7 @@
             return tmpHTML;
         }
 
-
+        //sucht nach "open" command und dessen Link zum Formular
         function locateURL(json) {
 
             var commands = json['Commands'];
