@@ -1,6 +1,7 @@
 <?php
 
-$fileName = $_POST['filename'];
+$postValue = $_POST['filename'];
+$fileName = str_replace(' ', '', $postValue);
 $fileInfo = glob("./assets/scripts/".$fileName.".json");
 
 if(!unlink($fileInfo[0])) {
