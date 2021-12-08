@@ -1,0 +1,115 @@
+{
+  "Name": "AntragsumfangBefristet",
+  "CreationDate": "2021-11-19",
+  "Commands": [
+    {
+      "Command": "comment",
+      "Target": "Auswahl von Verlängerung unbefristet",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "-Bitte wählen Sie den Antragsgegenstand aus: -",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[2]/label/input",
+      "Value": "",
+      "Targets": [
+        "id=ehgetoq-1",
+        "name=data[antragsgegenstand_Radio][ehgetoq]",
+        "xpath=//*[@id=\"ehgetoq-1\"]",
+        "xpath=//input[@id='ehgetoq-1']",
+        "xpath=//div[2]/label/input",
+        "css=#ehgetoq-1"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "-Bitte wählen Sie den Antragsgegenstand aus: -",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[2]/div[4]/div/div[2]/label/input",
+      "Value": "",
+      "Targets": [
+        "id=e9ynyac-1",
+        "name=data[aenderungGegenstand_Radio][e9ynyac]",
+        "xpath=//*[@id=\"e9ynyac-1\"]",
+        "xpath=//input[@id='e9ynyac-1']",
+        "xpath=//div[2]/div[4]/div/div[2]/label/input",
+        "css=#e9ynyac-1"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "-Bitte geben Sie die Art der Verlängerung an: -",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[5]/div/div[2]/label/input",
+      "Value": "",
+      "Targets": [
+        "id=e3dum3b-1",
+        "name=data[zeitraumVerlaengerung_Radio][e3dum3b]",
+        "xpath=//*[@id=\"e3dum3b-1\"]",
+        "xpath=//input[@id='e3dum3b-1']",
+        "xpath=//div[5]/div/div[2]/label/input",
+        "css=#e3dum3b-1"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "executeScript",
+      "Target": "var now = new Date();\nnow.setDate(now.getDate() + 14 );\nreturn ( ((now.getDate()) < 10)? '0'+(now.getDate()) : (now.getDate()) )+'.'+( ((now.getMonth()+1) < 10)? '0'+(now.getMonth()+1) : (now.getMonth()+1) )+'.'+now.getFullYear();",
+      "Value": "twoWeeks",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//input[2]",
+      "Value": "${twoWeeks}",
+      "Targets": [
+        "xpath=//*[@id=\"ep8x0ej\"]/div/div/input[2]",
+        "xpath=//input[@type='text']",
+        "xpath=//input[2]",
+        "css=#ep8x0ej > div:nth-child(2) > div > input.form-control.input.active"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "XType",
+      "Target": "${KEY_TAB}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "weiter zum nächsten Reiter",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=data[weiter6]",
+      "Value": "",
+      "Targets": [
+        "name=data[weiter6]",
+        "xpath=//*[@id=\"e77jdhn\"]/button",
+        "xpath=//button[@name='data[weiter6]']",
+        "xpath=//td[4]/div/button",
+        "css=#e77jdhn > button"
+      ],
+      "Description": ""
+    }
+  ]
+}

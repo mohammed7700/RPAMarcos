@@ -157,11 +157,13 @@
 
         function intoHTMLDOM(json) {
 
-            var container = document.getElementById("mainContainer");
+            var mainContainer = document.getElementById("mainContainer");
+            var container = document.createElement('div');
             container.innerHTML += createHtmlElements(json);
+            mainContainer.appendChild(container);
         }
 
-        function createHtmlElements (json) {
+        function createHtmlElements(json) {
 
             var tmpHTML = "";
 
@@ -175,14 +177,14 @@
             }
 
             tmpHTML += `
-            <div class="macro" id="${json['Name'].replace(/\s/g, '')}">
+            <div class="macro" id="">
                 <form action="deletefile.php" method="POST">
                     <input style="display: none" type="text" name="filename" value="${json['Name']}">
                     <button type="submit" class="delete" name="submit">Löschen</button>
                 </form> 
 
                 <label class="h2">${json['Name']}</label>
-                <input id="b" class="script" type="button" value="Run Macro">
+                <input id="${json['Name'].replace(/\s/g, '')}" class="script" type="button" value="Run Macro">
                 ${linkTag}
             </div>`;
 
