@@ -52,6 +52,8 @@ body {
 }
 
 .macro a {
+  padding-top: 5px;
+  display: block;
   font-size: 60%;
 }
 
